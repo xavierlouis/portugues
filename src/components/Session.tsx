@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Result, SessionCard, Word } from "../types";
 import { match } from "../lib/normalize";
 import { cloze, expectedAnswers, frenchGender, isNoun } from "../lib/words";
@@ -48,7 +48,8 @@ export function Session({
   const card = queue[0];
   const [typed, setTyped] = useState("");
   const [judged, setJudged] = useState<Result | null>(null);
-  const nextBtn = useRef<HTMLButtonElement>(null);
+  /** Presentation only: a skip is scored as wrong, but says so more kindly. */
+  const [skipped, setSkipped] = useState(false);
 
   const voiceObj = speechOn && voice.kind !== "none" ? voice.voice : null;
 
@@ -57,28 +58,42 @@ export function Session({
   useEffect(() => {
     setTyped("");
     setJudged(null);
+    setSkipped(false);
   }, [card?.key, card?.requeues]);
 
   if (!card || !view) return null;
 
-  const submit = () => {
-    if (judged !== null) {
-      onAdvance();
-      return;
-    }
-    if (typed.trim() === "") return;
-
+  const settle = (result: Result, wasSkip: boolean) => {
     warmUp(voiceObj);
-    const result = match(typed, view.accepted, {
-      allowArticleMiss: card.direction === "fr>pt" && isNoun(card.word),
-    });
     setJudged(result);
+    setSkipped(wasSkip);
     // §8 — persisted here, not on Continuar: closing the tab while the feedback
     // panel is open must not lose the answer.
     onJudge(card, result);
 
     // §11 — speak the Portuguese only once it can no longer give the answer away.
     if (voiceObj && card.direction === "fr>pt") speak(view.spoken, voiceObj);
+  };
+
+  const check = () => {
+    if (judged !== null || typed.trim() === "") return;
+    settle(
+      match(typed, view.accepted, {
+        allowArticleMiss: card.direction === "fr>pt" && isNoun(card.word),
+      }),
+      false,
+    );
+  };
+
+  /** "Não sei" — scored as wrong so the card resets and comes back this session. */
+  const skip = () => {
+    if (judged !== null) return;
+    settle("wrong", true);
+  };
+
+  const submit = () => {
+    if (judged !== null) onAdvance();
+    else check();
   };
 
   const pct = total === 0 ? 0 : Math.round((done / total) * 100);
@@ -144,14 +159,36 @@ export function Session({
             readOnly={judged !== null}
             placeholder={view.placeholder}
           />
+          {judged === null && (
+            <div className="flex gap-2">
+              <PressButton
+                onPress={skip}
+                className="rounded-xl border border-line bg-stone-2 px-5 py-4 font-display
+                           text-base font-semibold tracking-tight text-muted active:bg-stone-3"
+              >
+                Não sei
+              </PressButton>
+              <PressButton
+                onPress={check}
+                disabled={typed.trim() === ""}
+                className="flex-1 rounded-xl bg-cobalt px-4 py-4 font-display text-lg font-semibold
+                           tracking-tight text-cobalt-ink active:brightness-110
+                           disabled:bg-stone-2 disabled:text-muted"
+              >
+                Verificar{" "}
+                <span className="ml-1 font-sans text-sm font-normal opacity-70">↵</span>
+              </PressButton>
+            </div>
+          )}
+
           {judged !== null && (
             <Feedback
               result={judged}
+              skipped={skipped}
               typed={typed}
               card={card}
               accepted={view.accepted}
               onNext={submit}
-              nextRef={nextBtn}
             />
           )}
         </section>
@@ -160,23 +197,53 @@ export function Session({
   );
 }
 
+/**
+ * A button that does not steal focus from the answer input: without this the
+ * tap blurs the field, which closes the iOS keyboard and breaks "Enter
+ * advances" on the feedback that follows.
+ */
+function PressButton({
+  onPress,
+  disabled = false,
+  className,
+  children,
+}: {
+  onPress: () => void;
+  disabled?: boolean;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      disabled={disabled}
+      onPointerDown={(e) => e.preventDefault()}
+      onClick={onPress}
+      className={className}
+    >
+      {children}
+    </button>
+  );
+}
+
 function Feedback({
   result,
+  skipped,
   typed,
   card,
   accepted,
   onNext,
-  nextRef,
 }: {
   result: Result;
+  skipped: boolean;
   typed: string;
   card: SessionCard;
   accepted: string[];
   onNext: () => void;
-  nextRef: React.Ref<HTMLButtonElement>;
 }) {
   const target = accepted[0]!;
-  const showDiff = result !== "correct";
+  // Nothing was typed on a skip, so a diff would just repeat the target.
+  const showDiff = result !== "correct" && !skipped;
 
   return (
     <div className="rise flex flex-col gap-4">
@@ -190,7 +257,7 @@ function Feedback({
         }`}
       >
         <p className={`font-mono text-[11px] tracking-[0.18em] uppercase ${TONE[result]}`}>
-          {LABEL[result]}
+          {skipped ? "Não sabias — a resposta é" : LABEL[result]}
         </p>
 
         {showDiff && (
@@ -218,14 +285,13 @@ function Feedback({
         <p className="mt-1 text-sm text-muted italic">{card.word.example.tr}</p>
       </div>
 
-      <button
-        ref={nextRef}
-        onClick={onNext}
+      <PressButton
+        onPress={onNext}
         className="w-full rounded-xl bg-cobalt px-4 py-4 font-display text-lg font-semibold tracking-tight
                    text-cobalt-ink active:brightness-110"
       >
         Continuar <span className="ml-1 font-sans text-sm font-normal opacity-70">↵</span>
-      </button>
+      </PressButton>
     </div>
   );
 }

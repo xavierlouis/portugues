@@ -121,6 +121,102 @@ describe("App", () => {
     throw new Error("no fr>pt card appeared");
   });
 
+  it("checks the answer from the Verificar button as well as Enter", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("button", { name: /Estudar/ }));
+
+    await user.type(screen.getByLabelText("A tua resposta"), answerForCurrentPrompt());
+    await user.click(screen.getByRole("button", { name: /Verificar/ }));
+
+    expect(screen.getByText("Certo")).toBeDefined();
+    expect(Object.keys(load().store.cards)).toHaveLength(1);
+  });
+
+  it("disables Verificar until something is typed", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("button", { name: /Estudar/ }));
+
+    const check = () => screen.getByRole("button", { name: /Verificar/ }) as HTMLButtonElement;
+    expect(check().disabled).toBe(true);
+
+    await user.type(screen.getByLabelText("A tua resposta"), "x");
+    expect(check().disabled).toBe(false);
+
+    await user.clear(screen.getByLabelText("A tua resposta"));
+    expect(check().disabled).toBe(true);
+  });
+
+  it("reveals the answer on Não sei and scores it as wrong", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("button", { name: /Estudar/ }));
+
+    const expected = answerForCurrentPrompt();
+    await user.click(screen.getByRole("button", { name: "Não sei" }));
+
+    expect(screen.getByText(/Não sabias/)).toBeDefined();
+    expect(screen.getByText(expected)).toBeDefined();
+
+    // Scored as wrong: reset to box 1 and persisted straight away.
+    const cards = Object.values(load().store.cards);
+    expect(cards).toHaveLength(1);
+    expect(cards[0]).toMatchObject({ box: 1 });
+    expect(load().store.history[0]).toMatchObject({ seen: 1, ok: 0 });
+  });
+
+  it("brings a skipped card back later in the session", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("button", { name: /Estudar/ }));
+
+    const first = screen.getByRole("heading", { level: 1 }).textContent;
+    await user.click(screen.getByRole("button", { name: "Não sei" }));
+    await user.keyboard("{Enter}");
+
+    // The queue grew: the skipped card is still owed.
+    expect(screen.getByText(`1 / ${NEW_CARD_CAP + 1}`)).toBeDefined();
+
+    let seenAgain = false;
+    for (let i = 0; i < NEW_CARD_CAP + 2 && !seenAgain; i++) {
+      if (screen.getByRole("heading", { level: 1 }).textContent === first) seenAgain = true;
+      else {
+        await user.type(
+          screen.getByLabelText("A tua resposta"),
+          `${answerForCurrentPrompt()}{Enter}`,
+        );
+        await user.keyboard("{Enter}");
+      }
+    }
+    expect(seenAgain).toBe(true);
+  });
+
+  it("hides Verificar and Não sei once the card is judged", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("button", { name: /Estudar/ }));
+
+    await user.click(screen.getByRole("button", { name: "Não sei" }));
+    expect(screen.queryByRole("button", { name: "Não sei" })).toBeNull();
+    expect(screen.queryByRole("button", { name: /Verificar/ })).toBeNull();
+    expect(screen.getByRole("button", { name: /Continuar/ })).toBeDefined();
+  });
+
+  it("keeps focus in the input when the buttons are used", async () => {
+    const user = userEvent.setup();
+    render(<App />);
+    await user.click(screen.getByRole("button", { name: /Estudar/ }));
+
+    const input = screen.getByLabelText("A tua resposta");
+    await user.click(screen.getByRole("button", { name: "Não sei" }));
+    // Focus must stay put, otherwise iOS drops the keyboard and Enter dies.
+    expect(document.activeElement).toBe(input);
+
+    await user.keyboard("{Enter}");
+    expect(screen.getByText(`1 / ${NEW_CARD_CAP + 1}`)).toBeDefined();
+  });
+
   it("navigates to the word list and back", async () => {
     const user = userEvent.setup();
     render(<App />);
