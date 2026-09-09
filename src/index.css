@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+/* Limestone and basalt — Lisbon calçada. Cobalt is the one accent, taken from
+   azulejo tile; amber and vinho only ever appear as answer feedback. */
+:root {
+  --stone:      #f5f2ec;
+  --stone-2:    #eae5db;
+  --stone-3:    #d9d2c5;
+  --basalt:     #191d21;
+  --basalt-2:   #3d444b;
+  --muted:      #6d7178;
+  --cobalt:     #1f5f8b;
+  --cobalt-ink: #ffffff;
+  --cobalt-wash:#dde8f1;
+  --verde:      #2f6b4f;
+  --amarelo:    #9a6a05;
+  --amarelo-wash:#f6e9cd;
+  --vinho:      #a53826;
+  --vinho-wash: #f4dcd7;
+  --line:       #ddd6c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --stone:      #12161a;
+    --stone-2:    #1a1f25;
+    --stone-3:    #262d35;
+    --basalt:     #e8e4db;
+    --basalt-2:   #b3b8bf;
+    --muted:      #838a93;
+    --cobalt:     #5fa4d4;
+    --cobalt-ink: #0d1116;
+    --cobalt-wash:#1b2a37;
+    --verde:      #6cc08e;
+    --amarelo:    #d9a441;
+    --amarelo-wash:#33280f;
+    --vinho:      #e8806c;
+    --vinho-wash: #371914;
+    --line:       #2b323a;
+  }
+}
+
+@theme inline {
+  --color-stone: var(--stone);
+  --color-stone-2: var(--stone-2);
+  --color-stone-3: var(--stone-3);
+  --color-basalt: var(--basalt);
+  --color-basalt-2: var(--basalt-2);
+  --color-muted: var(--muted);
+  --color-cobalt: var(--cobalt);
+  --color-cobalt-ink: var(--cobalt-ink);
+  --color-cobalt-wash: var(--cobalt-wash);
+  --color-verde: var(--verde);
+  --color-amarelo: var(--amarelo);
+  --color-amarelo-wash: var(--amarelo-wash);
+  --color-vinho: var(--vinho);
+  --color-vinho-wash: var(--vinho-wash);
+  --color-line: var(--line);
+
+  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
+}
+
+/* These MUST stay inside @layer base. Unlayered rules beat every Tailwind
+   utility regardless of specificity, so a bare `button { color: inherit }`
+   would silently override every text-* class on a button. */
+@layer base {
+  html {
+    background: var(--stone);
+    color-scheme: light dark;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--stone);
+    color: var(--basalt);
+    font-family: var(--font-sans);
+    /* Safe areas: the accent bar sits right above the iOS home indicator. */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+      env(safe-area-inset-bottom) env(safe-area-inset-left);
+    overscroll-behavior-y: none;
+  }
+
+  button {
+    font: inherit;
+    color: inherit;
+  }
+
+  :where(button, a, input, select, [tabindex]):focus-visible {
+    outline: 2px solid var(--cobalt);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* The prompt double-rule: an azulejo border, thick over thin. */
+  .rule-tile {
+    border-bottom: 3px solid var(--cobalt);
+    box-shadow: 0 5px 0 -4px var(--line);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .rise {
+      animation: rise 180ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+    }
+  }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}

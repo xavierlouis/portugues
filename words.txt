@@ -1,0 +1,96 @@
+# Casa
+cadeira = chaise
+arrumar = ranger
+janela = fenêtre
+tapete = tapis
+
+# Trabalho
+prazo = délai, échéance
+reunião = réunion
+
+# Cidade
+comboio = train
+rua = rue
+
+# Geral
+apesar de = malgré
+viagem = voyage
+
+# Apresentações
+Chamo-me = Je m'appelle
+Moro na Rua das Flores = J'habite rue des Fleurs
+Qual é o seu nome = Quel est votre nom ?
+Olá, como é que vai = Bonjour comment allez-vous ?
+Com licença, minha senhora = Excusez-moi madame, Excusez-moi madame (formel)
+
+# Saúde
+Sinto-me doente = Je me sens malade
+Queixa-se = Vous vous plaignez
+médico = médecin
+Ele precisa de um veterinário = Il a besoin d'un vétérinaire
+
+# Comida
+E come bem = Et vous mangez bien ?
+Gosto muito de cenouras = J'aime beaucoup les carottes
+No café = Au café
+Eu tomo um café = Je prends un café
+Tenho muita sede = J'ai très soif
+Tens fome = Tu as faim ?
+Tenho fome = J'ai faim
+guloso = gourmand
+Gosta de carne ou de peixe = Aimez-vous la viande ou le poisson ?
+Gosto de carne = J'aime la viande
+Quero um sumo de laranja = Je veux un jus d'orange
+Quer um café = Voulez-vous un café ?
+
+# Cidade
+Onde é = Où est ?
+perto = près
+É em LX = C'est à LX ?
+longe = loin
+Ele apanha um táxi = Il prend un taxi
+Apanhar um táxi = Prendre un taxi
+Vão a pé = Vous y allez à pied ?, Vous y allez à pied ? (pluriel)
+
+# Palavras úteis
+compridas = longues
+Preciso = J'ai besoin
+Sou, sim = Oui je suis, Oui (je suis)
+Procuro = Je cherche
+mas = mais
+como = comment
+Você sabe = Savez-vous ?, Savez-vous ? (singulier)
+então = alors
+A que horas = À quelle heure ?
+É difícil arranjar = Il est difficile de trouver
+É verdade = C'est vrai
+Não sei que fazer = Je ne sais pas quoi faire
+Para mim = Pour moi
+talvez = peut-être
+Que bom = Super !, C'est bien !
+
+# Geral
+meninos = les enfants
+Tens frio = Tu as froid ?
+Ela tem frio = Elle a froid
+Muitos amigos = Beaucoup d'amis
+
+# Trabalho
+apoio ao cliente = service client
+
+# Verbos
+Você tem = Vous avez, Vous avez (singulier)
+Você vai partir = Allez-vous partir ?
+Eu quero = Je veux
+Tu queres = Tu veux, Tu veux (familier)
+Ele quer = Il veut
+Nós queremos = Nous voulons
+Eles querem = Ils veulent
+Eu vou = Je vais
+Tu vais = Tu vas
+Ele vai = Il va
+Nós vamos = Nous allons
+Eles vão = Ils vont
+eu percebo = je comprends
+A senhora percebe = Madame vous comprenez
+O senhor percebe = Monsieur vous comprenez

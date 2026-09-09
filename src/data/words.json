@@ -1,0 +1,1324 @@
+[
+  {
+    "id": "a-que-horas",
+    "pt": "A que horas",
+    "tr": [
+      "À quelle heure ?"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "A que horas abre a loja?",
+      "tr": "À quelle heure ouvre le magasin ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "a-senhora-percebe",
+    "pt": "A senhora percebe",
+    "tr": [
+      "Madame vous comprenez"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "A senhora percebe o que eu digo?",
+      "tr": "Madame, comprenez-vous ce que je dis ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "apanhar-um-taxi",
+    "pt": "Apanhar um táxi",
+    "tr": [
+      "Prendre un taxi"
+    ],
+    "tags": [
+      "Cidade"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "É melhor apanhar um táxi agora.",
+      "tr": "Il vaut mieux prendre un taxi maintenant."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "apesar-de",
+    "pt": "apesar de",
+    "tr": [
+      "malgré"
+    ],
+    "tags": [
+      "Geral"
+    ],
+    "pos": "prep",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Saímos apesar de estar a chover.",
+      "tr": "Nous sommes sortis alors qu'il pleuvait."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "apoio-ao-cliente",
+    "pt": "apoio ao cliente",
+    "tr": [
+      "service client"
+    ],
+    "tags": [
+      "Trabalho"
+    ],
+    "pos": "noun",
+    "article": "o",
+    "trGender": "m",
+    "example": {
+      "pt": "Liguei para o apoio ao cliente.",
+      "tr": "J'ai appelé le service client."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "arrumar",
+    "pt": "arrumar",
+    "tr": [
+      "ranger"
+    ],
+    "tags": [
+      "Casa"
+    ],
+    "pos": "verb",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Tenho de arrumar o meu quarto.",
+      "tr": "Je dois ranger ma chambre."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "cadeira",
+    "pt": "cadeira",
+    "tr": [
+      "chaise"
+    ],
+    "tags": [
+      "Casa"
+    ],
+    "pos": "noun",
+    "article": "a",
+    "trGender": "f",
+    "example": {
+      "pt": "Senta-te nesta cadeira, por favor.",
+      "tr": "Assieds-toi sur cette chaise, s'il te plaît."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "chamo-me",
+    "pt": "Chamo-me",
+    "tr": [
+      "Je m'appelle"
+    ],
+    "tags": [
+      "Apresentações"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Chamo-me Xavier, muito prazer.",
+      "tr": "Je m'appelle Xavier, enchanté."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "com-licenca-minha-senhora",
+    "pt": "Com licença, minha senhora",
+    "tr": [
+      "Excusez-moi madame",
+      "Excusez-moi madame (formel)"
+    ],
+    "tags": [
+      "Apresentações"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Com licença, minha senhora, posso passar?",
+      "tr": "Excusez-moi madame, puis-je passer ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "comboio",
+    "pt": "comboio",
+    "tr": [
+      "train"
+    ],
+    "tags": [
+      "Cidade"
+    ],
+    "pos": "noun",
+    "article": "o",
+    "trGender": "m",
+    "example": {
+      "pt": "O comboio para Braga já partiu.",
+      "tr": "Le train pour Braga est déjà parti."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "como",
+    "pt": "como",
+    "tr": [
+      "comment"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "adv",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Como se diz isto em português?",
+      "tr": "Comment dit-on cela en portugais ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "compridas",
+    "pt": "compridas",
+    "tr": [
+      "longues"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "adj",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Ela tem as unhas muito compridas.",
+      "tr": "Elle a les ongles très longs."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "e-come-bem",
+    "pt": "E come bem",
+    "tr": [
+      "Et vous mangez bien ?"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "E come bem aqui em Lisboa?",
+      "tr": "Et vous mangez bien ici à Lisbonne ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "e-dificil-arranjar",
+    "pt": "É difícil arranjar",
+    "tr": [
+      "Il est difficile de trouver"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "É difícil arranjar casa em Lisboa.",
+      "tr": "Il est difficile de trouver un logement à Lisbonne."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "e-em-lx",
+    "pt": "É em LX",
+    "tr": [
+      "C'est à LX ?"
+    ],
+    "tags": [
+      "Cidade"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "A reunião é em LX ou no Porto?",
+      "tr": "La réunion est à Lisbonne ou à Porto ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "e-verdade",
+    "pt": "É verdade",
+    "tr": [
+      "C'est vrai"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "É verdade, ele mudou-se para o Porto.",
+      "tr": "C'est vrai, il a déménagé à Porto."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "ela-tem-frio",
+    "pt": "Ela tem frio",
+    "tr": [
+      "Elle a froid"
+    ],
+    "tags": [
+      "Geral"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Ela tem frio sem o casaco.",
+      "tr": "Elle a froid sans son manteau."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "ele-apanha-um-taxi",
+    "pt": "Ele apanha um táxi",
+    "tr": [
+      "Il prend un taxi"
+    ],
+    "tags": [
+      "Cidade"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Ele apanha um táxi para o aeroporto.",
+      "tr": "Il prend un taxi pour l'aéroport."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "ele-precisa-de-um-veterinario",
+    "pt": "Ele precisa de um veterinário",
+    "tr": [
+      "Il a besoin d'un vétérinaire"
+    ],
+    "tags": [
+      "Saúde"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Ele precisa de um veterinário para o gato.",
+      "tr": "Il a besoin d'un vétérinaire pour le chat."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "ele-quer",
+    "pt": "Ele quer",
+    "tr": [
+      "Il veut"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Ele quer mudar de emprego.",
+      "tr": "Il veut changer de travail."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "ele-vai",
+    "pt": "Ele vai",
+    "tr": [
+      "Il va"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Ele vai chegar depois do almoço.",
+      "tr": "Il va arriver après le déjeuner."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "eles-querem",
+    "pt": "Eles querem",
+    "tr": [
+      "Ils veulent"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Eles querem jantar mais cedo.",
+      "tr": "Ils veulent dîner plus tôt."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "eles-vao",
+    "pt": "Eles vão",
+    "tr": [
+      "Ils vont"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Eles vão mudar-se para o Porto.",
+      "tr": "Ils vont déménager à Porto."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "entao",
+    "pt": "então",
+    "tr": [
+      "alors"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "adv",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Então, vamos jantar fora hoje?",
+      "tr": "Alors, on dîne dehors ce soir ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "eu-percebo",
+    "pt": "eu percebo",
+    "tr": [
+      "je comprends"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Agora eu percebo o problema.",
+      "tr": "Maintenant je comprends le problème."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "eu-quero",
+    "pt": "Eu quero",
+    "tr": [
+      "Je veux"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Eu quero aprender português europeu.",
+      "tr": "Je veux apprendre le portugais européen."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "eu-tomo-um-cafe",
+    "pt": "Eu tomo um café",
+    "tr": [
+      "Je prends un café"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "De manhã eu tomo um café.",
+      "tr": "Le matin je prends un café."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "eu-vou",
+    "pt": "Eu vou",
+    "tr": [
+      "Je vais"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Eu vou ao mercado de manhã.",
+      "tr": "Je vais au marché le matin."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "gosta-de-carne-ou-de-peixe",
+    "pt": "Gosta de carne ou de peixe",
+    "tr": [
+      "Aimez-vous la viande ou le poisson ?"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Ao jantar, gosta de carne ou de peixe?",
+      "tr": "Au dîner, aimez-vous la viande ou le poisson ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "gosto-de-carne",
+    "pt": "Gosto de carne",
+    "tr": [
+      "J'aime la viande"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Gosto de carne bem passada.",
+      "tr": "J'aime la viande bien cuite."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "gosto-muito-de-cenouras",
+    "pt": "Gosto muito de cenouras",
+    "tr": [
+      "J'aime beaucoup les carottes"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Gosto muito de cenouras cozidas.",
+      "tr": "J'aime beaucoup les carottes cuites."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "guloso",
+    "pt": "guloso",
+    "tr": [
+      "gourmand"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "adj",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "O meu irmão é muito guloso.",
+      "tr": "Mon frère est très gourmand."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "janela",
+    "pt": "janela",
+    "tr": [
+      "fenêtre"
+    ],
+    "tags": [
+      "Casa"
+    ],
+    "pos": "noun",
+    "article": "a",
+    "trGender": "f",
+    "example": {
+      "pt": "Abre a janela, está muito calor.",
+      "tr": "Ouvre la fenêtre, il fait très chaud."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "longe",
+    "pt": "longe",
+    "tr": [
+      "loin"
+    ],
+    "tags": [
+      "Cidade"
+    ],
+    "pos": "adv",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "A estação fica longe daqui?",
+      "tr": "La gare est loin d'ici ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "mas",
+    "pt": "mas",
+    "tr": [
+      "mais"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "conj",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Gosto de peixe, mas prefiro carne.",
+      "tr": "J'aime le poisson, mais je préfère la viande."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "medico",
+    "pt": "médico",
+    "tr": [
+      "médecin"
+    ],
+    "tags": [
+      "Saúde"
+    ],
+    "pos": "noun",
+    "article": "o",
+    "trGender": "m",
+    "example": {
+      "pt": "O médico chega dentro de uma hora.",
+      "tr": "Le médecin arrive dans une heure."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "meninos",
+    "pt": "meninos",
+    "tr": [
+      "les enfants"
+    ],
+    "tags": [
+      "Geral"
+    ],
+    "pos": "noun",
+    "article": "os",
+    "trGender": "m",
+    "example": {
+      "pt": "Os meninos brincam no jardim.",
+      "tr": "Les enfants jouent dans le jardin."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "moro-na-rua-das-flores",
+    "pt": "Moro na Rua das Flores",
+    "tr": [
+      "J'habite rue des Fleurs"
+    ],
+    "tags": [
+      "Apresentações"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Moro na Rua das Flores há dois anos.",
+      "tr": "J'habite rue des Fleurs depuis deux ans."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "muitos-amigos",
+    "pt": "Muitos amigos",
+    "tr": [
+      "Beaucoup d'amis"
+    ],
+    "tags": [
+      "Geral"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Ele tem muitos amigos em Lisboa.",
+      "tr": "Il a beaucoup d'amis à Lisbonne."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "nao-sei-que-fazer",
+    "pt": "Não sei que fazer",
+    "tr": [
+      "Je ne sais pas quoi faire"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Não sei que fazer com isto.",
+      "tr": "Je ne sais pas quoi faire de ça."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "no-cafe",
+    "pt": "No café",
+    "tr": [
+      "Au café"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Estou à tua espera no café.",
+      "tr": "Je t'attends au café."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "nos-queremos",
+    "pt": "Nós queremos",
+    "tr": [
+      "Nous voulons"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Nós queremos ficar mais uma noite.",
+      "tr": "Nous voulons rester une nuit de plus."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "nos-vamos",
+    "pt": "Nós vamos",
+    "tr": [
+      "Nous allons"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Nós vamos à praia no sábado.",
+      "tr": "Nous allons à la plage samedi."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "o-senhor-percebe",
+    "pt": "O senhor percebe",
+    "tr": [
+      "Monsieur vous comprenez"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "O senhor percebe bem o português.",
+      "tr": "Monsieur, vous comprenez bien le portugais."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "ola-como-e-que-vai",
+    "pt": "Olá, como é que vai",
+    "tr": [
+      "Bonjour comment allez-vous ?"
+    ],
+    "tags": [
+      "Apresentações"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Olá, como é que vai hoje?",
+      "tr": "Bonjour, comment allez-vous aujourd'hui ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "onde-e",
+    "pt": "Onde é",
+    "tr": [
+      "Où est ?"
+    ],
+    "tags": [
+      "Cidade"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Onde é a paragem do autocarro?",
+      "tr": "Où est l'arrêt de bus ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "para-mim",
+    "pt": "Para mim",
+    "tr": [
+      "Pour moi"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Um café para mim, por favor.",
+      "tr": "Un café pour moi, s'il vous plaît."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "perto",
+    "pt": "perto",
+    "tr": [
+      "près"
+    ],
+    "tags": [
+      "Cidade"
+    ],
+    "pos": "adv",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "A farmácia fica perto da praça.",
+      "tr": "La pharmacie est près de la place."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "prazo",
+    "pt": "prazo",
+    "tr": [
+      "délai",
+      "échéance"
+    ],
+    "tags": [
+      "Trabalho"
+    ],
+    "pos": "noun",
+    "article": "o",
+    "trGender": "m",
+    "example": {
+      "pt": "O prazo termina na próxima sexta.",
+      "tr": "Le délai se termine vendredi prochain."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "preciso",
+    "pt": "Preciso",
+    "tr": [
+      "J'ai besoin"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "verb",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Preciso de ajuda com estas malas.",
+      "tr": "J'ai besoin d'aide avec ces valises."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "procuro",
+    "pt": "Procuro",
+    "tr": [
+      "Je cherche"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "verb",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Procuro a casa de banho.",
+      "tr": "Je cherche les toilettes."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "qual-e-o-seu-nome",
+    "pt": "Qual é o seu nome",
+    "tr": [
+      "Quel est votre nom ?"
+    ],
+    "tags": [
+      "Apresentações"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Desculpe, qual é o seu nome?",
+      "tr": "Pardon, quel est votre nom ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "que-bom",
+    "pt": "Que bom",
+    "tr": [
+      "Super !",
+      "C'est bien !"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Que bom que vieste!",
+      "tr": "Super, tu es venu !"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "queixa-se",
+    "pt": "Queixa-se",
+    "tr": [
+      "Vous vous plaignez"
+    ],
+    "tags": [
+      "Saúde"
+    ],
+    "pos": "verb",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Queixa-se sempre das mesmas dores.",
+      "tr": "Vous vous plaignez toujours des mêmes douleurs."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "quer-um-cafe",
+    "pt": "Quer um café",
+    "tr": [
+      "Voulez-vous un café ?"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Quer um café antes de sair?",
+      "tr": "Voulez-vous un café avant de partir ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "quero-um-sumo-de-laranja",
+    "pt": "Quero um sumo de laranja",
+    "tr": [
+      "Je veux un jus d'orange"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Quero um sumo de laranja, por favor.",
+      "tr": "Je voudrais un jus d'orange, s'il vous plaît."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "reuniao",
+    "pt": "reunião",
+    "tr": [
+      "réunion"
+    ],
+    "tags": [
+      "Trabalho"
+    ],
+    "pos": "noun",
+    "article": "a",
+    "trGender": "f",
+    "example": {
+      "pt": "A reunião foi adiada para amanhã.",
+      "tr": "La réunion a été reportée à demain."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "rua",
+    "pt": "rua",
+    "tr": [
+      "rue"
+    ],
+    "tags": [
+      "Cidade"
+    ],
+    "pos": "noun",
+    "article": "a",
+    "trGender": "f",
+    "example": {
+      "pt": "A minha rua é muito sossegada.",
+      "tr": "Ma rue est très calme."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "sinto-me-doente",
+    "pt": "Sinto-me doente",
+    "tr": [
+      "Je me sens malade"
+    ],
+    "tags": [
+      "Saúde"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Sinto-me doente desde ontem à noite.",
+      "tr": "Je me sens malade depuis hier soir."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "sou-sim",
+    "pt": "Sou, sim",
+    "tr": [
+      "Oui je suis",
+      "Oui (je suis)"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "És francês? Sou, sim.",
+      "tr": "Tu es français ? Oui, je le suis."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "talvez",
+    "pt": "talvez",
+    "tr": [
+      "peut-être"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "adv",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Talvez vá à praia no domingo.",
+      "tr": "J'irai peut-être à la plage dimanche."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "tapete",
+    "pt": "tapete",
+    "tr": [
+      "tapis"
+    ],
+    "tags": [
+      "Casa"
+    ],
+    "pos": "noun",
+    "article": "o",
+    "trGender": "m",
+    "example": {
+      "pt": "O gato dorme sempre no tapete.",
+      "tr": "Le chat dort toujours sur le tapis."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "tenho-fome",
+    "pt": "Tenho fome",
+    "tr": [
+      "J'ai faim"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Tenho fome, vamos comer qualquer coisa.",
+      "tr": "J'ai faim, allons manger quelque chose."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "tenho-muita-sede",
+    "pt": "Tenho muita sede",
+    "tr": [
+      "J'ai très soif"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Tenho muita sede depois do treino.",
+      "tr": "J'ai très soif après l'entraînement."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "tens-fome",
+    "pt": "Tens fome",
+    "tr": [
+      "Tu as faim ?"
+    ],
+    "tags": [
+      "Comida"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Tens fome ou já almoçaste?",
+      "tr": "Tu as faim ou tu as déjà déjeuné ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "tens-frio",
+    "pt": "Tens frio",
+    "tr": [
+      "Tu as froid ?"
+    ],
+    "tags": [
+      "Geral"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Tens frio? Fecha a janela.",
+      "tr": "Tu as froid ? Ferme la fenêtre."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "tu-queres",
+    "pt": "Tu queres",
+    "tr": [
+      "Tu veux",
+      "Tu veux (familier)"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Tu queres vir connosco ao cinema?",
+      "tr": "Tu veux venir avec nous au cinéma ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "tu-vais",
+    "pt": "Tu vais",
+    "tr": [
+      "Tu vas"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Tu vais de comboio ou de carro?",
+      "tr": "Tu y vas en train ou en voiture ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "vao-a-pe",
+    "pt": "Vão a pé",
+    "tr": [
+      "Vous y allez à pied ?",
+      "Vous y allez à pied ? (pluriel)"
+    ],
+    "tags": [
+      "Cidade"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Vão a pé ou de comboio?",
+      "tr": "Vous y allez à pied ou en train ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "viagem",
+    "pt": "viagem",
+    "tr": [
+      "voyage"
+    ],
+    "tags": [
+      "Geral"
+    ],
+    "pos": "noun",
+    "article": "a",
+    "trGender": "m",
+    "example": {
+      "pt": "A viagem de comboio demorou três horas.",
+      "tr": "Le voyage en train a duré trois heures."
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "voce-sabe",
+    "pt": "Você sabe",
+    "tr": [
+      "Savez-vous ?",
+      "Savez-vous ? (singulier)"
+    ],
+    "tags": [
+      "Palavras úteis"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Você sabe onde fica a estação?",
+      "tr": "Savez-vous où se trouve la gare ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "voce-tem",
+    "pt": "Você tem",
+    "tr": [
+      "Vous avez",
+      "Vous avez (singulier)"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Você tem tempo para um café?",
+      "tr": "Vous avez le temps pour un café ?"
+    },
+    "enrichedAt": "2026-09-04"
+  },
+  {
+    "id": "voce-vai-partir",
+    "pt": "Você vai partir",
+    "tr": [
+      "Allez-vous partir ?"
+    ],
+    "tags": [
+      "Verbos"
+    ],
+    "pos": "expr",
+    "article": null,
+    "trGender": null,
+    "example": {
+      "pt": "Você vai partir amanhã de manhã?",
+      "tr": "Vous allez partir demain matin ?"
+    },
+    "enrichedAt": "2026-09-04"
+  }
+]
