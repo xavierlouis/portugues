@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Result, SessionCard, Word } from "../types";
 import { match } from "../lib/normalize";
 import { cloze, expectedAnswers, frenchGender, isNoun } from "../lib/words";
@@ -35,6 +35,34 @@ const TONE: Record<Result, string> = {
   wrong: "text-vinho",
 };
 
+/** scrollTo is absent in jsdom, and a missing API must not break the session. */
+function scrollTop(el: HTMLElement | null, top: number): void {
+  if (!el || typeof el.scrollTo !== "function") return;
+  const reduced = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  el.scrollTo({ top, behavior: reduced ? "auto" : "smooth" });
+}
+
+/**
+ * The height actually visible to the user. `dvh` does not shrink for the iOS
+ * keyboard, so a `100dvh` shell keeps centring against the full screen and
+ * pushes the prompt up out of view. visualViewport does shrink, so the session
+ * can lay itself out in the space above the keyboard.
+ */
+function useVisibleHeight(): number | null {
+  const [h, setH] = useState<number | null>(null);
+
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!vv) return; // no support: the h-dvh class stays in charge
+    const sync = () => setH(Math.round(vv.height));
+    sync();
+    vv.addEventListener("resize", sync);
+    return () => vv.removeEventListener("resize", sync);
+  }, []);
+
+  return h;
+}
+
 export function Session({
   queue,
   total,
@@ -50,6 +78,8 @@ export function Session({
   const [judged, setJudged] = useState<Result | null>(null);
   /** Presentation only: a skip is scored as wrong, but says so more kindly. */
   const [skipped, setSkipped] = useState(false);
+  const vh = useVisibleHeight();
+  const scroller = useRef<HTMLElement>(null);
 
   const voiceObj = speechOn && voice.kind !== "none" ? voice.voice : null;
 
@@ -59,7 +89,16 @@ export function Session({
     setTyped("");
     setJudged(null);
     setSkipped(false);
+    scrollTop(scroller.current, 0);
   }, [card?.key, card?.requeues]);
+
+  // With the keyboard up there may not be room for the verdict and Continuar,
+  // so bring them into view rather than leaving them below the fold.
+  useEffect(() => {
+    const el = scroller.current;
+    if (judged === null || !el) return;
+    scrollTop(el, el.scrollHeight);
+  }, [judged]);
 
   if (!card || !view) return null;
 
@@ -99,8 +138,8 @@ export function Session({
   const pct = total === 0 ? 0 : Math.round((done / total) * 100);
 
   return (
-    <div className="flex min-h-dvh flex-col">
-      <div className="sticky top-0 z-10 bg-stone">
+    <div className="flex h-dvh flex-col" style={vh ? { height: `${vh}px` } : undefined}>
+      <div className="shrink-0 bg-stone">
         <div className="h-[3px] w-full bg-stone-3">
           <div
             className="h-full bg-cobalt transition-[width] duration-300"
@@ -120,10 +159,14 @@ export function Session({
         </div>
       </div>
 
-      <main className="mx-auto flex w-full max-w-lg flex-1 flex-col px-4">
-        <section
-          className={`flex flex-col py-8 ${judged === null ? "flex-1 justify-center" : ""}`}
-        >
+      <main ref={scroller} className="flex-1 overflow-y-auto overscroll-contain">
+        {/* One centred group: the prompt sits directly above the answer, so the
+            iOS keyboard can never strand it at the top of the screen. `m-auto`
+            centres without clipping the top when the content is taller than the
+            space, which `justify-center` would. */}
+        <div className="mx-auto flex min-h-full w-full max-w-lg flex-col px-4">
+        <div className="m-auto flex w-full flex-col gap-5 py-5">
+        <section className="flex flex-col">
           <p className="mb-3 font-mono text-[11px] tracking-[0.18em] text-muted uppercase">
             {view.eyebrow}
           </p>
@@ -151,7 +194,7 @@ export function Session({
         {/* Reads top to bottom: prompt, what you typed, what was right, next.
             The input stays mounted and focused throughout, so Enter always
             advances and iOS never dismisses the keyboard mid-session. */}
-        <section className="mt-auto flex flex-col gap-4 pb-6">
+        <section className="flex flex-col gap-4">
           <AnswerInput
             value={typed}
             onChange={setTyped}
@@ -192,6 +235,8 @@ export function Session({
             />
           )}
         </section>
+        </div>
+        </div>
       </main>
     </div>
   );
