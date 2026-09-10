@@ -191,6 +191,8 @@ NFD → remove `\p{Diacritic}` → NFC. Must map `ç → c`, `ã → a`, `ê →
 
 Given `input` and the array of `accepted` answers (canonical first, plus alternates from §4 for `pt>fr`):
 
+For `pt>fr`, every tu/nous/vous question also accepts its equivalent forms, generated rather than written in `words.txt`: *Voulez-vous un café ?* ↔ *Vous voulez un café ?* ↔ *Est-ce que vous voulez un café ?* (`src/lib/french.ts`).
+
 1. `normalize(input)` equals any `normalize(accepted)` → **correct**.
 2. For `fr>pt` on a noun: input equals the accepted answer minus its leading article → **article miss**.
 3. `stripDiacritics(normalize(input))` equals any `stripDiacritics(normalize(accepted))` → **accent miss**.
@@ -271,6 +273,7 @@ Mobile-first, single column, `max-w-lg` centred. Everything reachable in one thu
 - Thin progress bar at the top (`7 / 20`).
 - Prompt, large and centred. For `pt>fr` and `cloze`, a speaker button (§11).
 - For `fr>pt` nouns, the prompt shows the French word with its French gender marker — the point is that the user must produce the *Portuguese* gender.
+- For `pt>fr`, when the canonical translation addresses someone, the prompt says so — *responde com « vous »* — because Portuguese (*o seu nome*, *quer*) often doesn't.
 - One text input, autofocused.
 - **AccentBar**: a horizontal row of `á à â ã ç é ê í ó ô õ ú` buttons directly above the input, inserting at the cursor position. Shown only on touch devices (`pointer: coarse`). Non-negotiable for phone use.
 - `Enter` submits. After feedback, `Enter` advances. Never require a mouse.

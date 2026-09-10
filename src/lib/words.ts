@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { POS_VALUES, type Direction, type Word } from "../types";
+import { register, withQuestionVariants, type Register } from "./french";
 import { stripDiacritics } from "./normalize";
 
 export const wordSchema = z.object({
@@ -41,7 +42,8 @@ export function expectedAnswers(word: Word, direction: Direction): string[] {
     case "fr>pt":
       return [isNoun(word) ? `${word.article} ${word.pt}` : word.pt];
     case "pt>fr":
-      return word.tr;
+      // "Voulez-vous un café ?" and "Vous voulez un café ?" are the same answer.
+      return withQuestionVariants(word.tr);
     case "cloze": {
       const c = cloze(word);
       return c ? [c.answer] : [word.pt];
@@ -116,6 +118,17 @@ export function frenchGender(word: Word): "m." | "f." | null {
   if (/^(la|une)\s/i.test(t)) return "f.";
   if (/^(le|un)\s/i.test(t)) return "m.";
   return null;
+}
+
+/**
+ * `pt>fr` — *Qual é o seu nome* could be "votre nom" or "ton nom"; the
+ * canonical translation decides, and the prompt says which. Not repeated when
+ * the Portuguese already says "tu".
+ */
+export function frenchRegister(word: Word): Register | null {
+  const r = register(word.tr[0]!);
+  if (r === "tu" && /(^|[^\p{L}])tu($|[^\p{L}])/iu.test(word.pt)) return null;
+  return r;
 }
 
 export function allTags(words: Word[]): string[] {

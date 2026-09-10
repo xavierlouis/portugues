@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Result, SessionCard, Word } from "../types";
 import { match } from "../lib/normalize";
-import { cloze, expectedAnswers, frenchGender, isNoun } from "../lib/words";
+import { cloze, expectedAnswers, frenchGender, frenchRegister, isNoun } from "../lib/words";
 import { AnswerInput } from "./AnswerInput";
 import { Diff, Target } from "./Diff";
 import { Speaker } from "./Speaker";
@@ -371,10 +371,11 @@ function describe(card: SessionCard): View {
   }
 
   if (card.direction === "pt>fr") {
+    const reg = frenchRegister(w);
     return {
       eyebrow: "Português → Francês",
       prompt: isNoun(w) ? `${w.article} ${w.pt}` : w.pt,
-      sub: null,
+      sub: reg ? `responde com « ${reg} »` : null,
       gender: null,
       accepted,
       placeholder: "em francês",
